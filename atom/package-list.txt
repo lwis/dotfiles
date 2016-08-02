@@ -1,5 +1,4 @@
 atom-beautify
-atom-typescript
 autocomplete-paths
 autocomplete-python
 color-picker
