@@ -24,6 +24,8 @@
     coloured: false
   "language-log":
     tail: true
+  linter:
+    showErrorPanel: false
   "linter-js-yaml":
     customTags: [
       "!include"

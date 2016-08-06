@@ -15,8 +15,8 @@
     ~/.nano: nano.symlink
 
 - shell:
+  - [~/.dotfiles/apt/install.sh, "Installing Apt packages"]
   - [git submodule update --init --recursive, "Installing submodules"]
-  - [~/.dotfiles/zplug/install.sh, "Installing zplug"]
   - [~/.dotfiles/atom/install.sh, "Installing Atom plugins"]
   - [~/.dotfiles/fzf/install.sh, "Installing fzf"]
   - command: ~/.dotfiles/git/install.sh
