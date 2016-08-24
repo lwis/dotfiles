@@ -1,7 +1,7 @@
 glances
-wheel
 pip
-virtualenvwrapper
+pip-tools
 piprot
 pylama
-pip-tools
+virtualenvwrapper
+wheel
