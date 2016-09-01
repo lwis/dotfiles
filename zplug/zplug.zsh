@@ -1,21 +1,13 @@
-source ~/.zplug/init.zsh
+source $ZPLUG_HOME/init.zsh
 
-#Load path first.
-zplug "$DOTFILES", use:"**/path.zsh", nice:1, from:local
-
-#Load everything else.
-zplug "$DOTFILES", use:"**/*.zsh", ignore:"**/(path|completion|zplug|config|plugins).zsh", from:local
-
-#Load the theme.
-zplug "lwis/zsh-theme"
+# #Load the theme.
+zplug "lwis/zsh-theme", use:"theme.plugin.zsh"
 #zplug "$PROJECTS/zsh-theme", from:local
 
 #Load completions last.
-zplug "$DOTFILES", use:"**/completion.zsh", nice:10, from:local
-zplug "zsh-users/zsh-autosuggestions", nice:10
-zplug "zsh-users/zsh-syntax-highlighting", nice:10
-zplug "zsh-users/zsh-completions", nice:10
-zplug "srijanshetty/zsh-pip-completion", nice:10
+zplug "zsh-users/zsh-autosuggestions", use:"zsh-autosuggestions.plugin.zsh", nice:10
+zplug "zsh-users/zsh-syntax-highlighting", use:"zsh-syntax-highlighting.plugin.zsh", nice:10
+# zplug "zsh-users/zsh-completions", use:"zsh-completions.zsh", nice:10
 
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "

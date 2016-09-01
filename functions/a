@@ -1,0 +1,10 @@
+function a()
+{
+    if [ -d $1 ]; then
+        cd $1 && atom .
+    elif [ -f $1 ]; then
+        cd dirname $1 && atom $1
+    else
+        atom $1
+    fi
+}

@@ -12,4 +12,9 @@ add_to_path /usr/sbin
 add_to_path /usr/local/sbin
 add_to_path /usr/local/bin
 
+if [ -d /usr/local/opt/coreutils/libexec/gnubin ]
+then
+    export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+fi
+
 export PATH="./bin:$DOTFILES/bin:$PATH"

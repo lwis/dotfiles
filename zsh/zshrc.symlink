@@ -8,15 +8,30 @@ export PROJECTS=$HOME/Projects
 # you'll have access to them in your scripts.
 if [[ -a ~/.localrc ]]
 then
-  source ~/.localrc
+    source ~/.localrc
 fi
 
-source $DOTFILES/zsh/config.zsh
+# Path
+source $DOTFILES/system/path.zsh
+source $DOTFILES/go/path.zsh
+source $DOTFILES/jenv/path.zsh
+source $DOTFILES/pip/path.zsh
 
+# Everything else
+source $DOTFILES/system/aliases.zsh
+source $DOTFILES/system/env.zsh
+source $DOTFILES/system/keys.zsh
+source $DOTFILES/zsh/config.zsh
+source $DOTFILES/zsh/window.zsh
+source $DOTFILES/zsh/aliases.zsh
+source $DOTFILES/zsh/fpath.zsh
+source $DOTFILES/git/aliases.zsh
+
+export ZPLUG_HOME=$HOME/.zplug
 source $DOTFILES/zplug/zplug.zsh
 zplug load
 
-if [[ -d /usr/local/opt/coreutils/libexec/gnubin ]]
-then
-    export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-fi
+# Completions
+source $DOTFILES/zsh/completion.zsh
+source $DOTFILES/fzf/completion.zsh
+source $DOTFILES/pip/completion.zsh
