@@ -77,16 +77,13 @@ then
   echo
 fi
 
-if test -d ~/.zplug
+if test -f ~/.zshrc
 then
-  echo "\033[00;32m──›\033[0m updating zplug"
+  echo "\033[00;32m──›\033[0m updating zsh plugins"
   set +e
-  git -C ~/.zplug pull
-  source $DOTFILES/zplug/zplug.zsh
-  zplug update
-  zplug clean --force
-  zplug clear
-  zplug load
+  git -C $DOTFILES submodule update --init --recursive .
+  autoload -Uz compinit
+  rm -f ~/.zcompdump; compinit
   set -e
 fi
 

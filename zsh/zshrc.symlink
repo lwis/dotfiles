@@ -26,12 +26,13 @@ source $DOTFILES/zsh/window.zsh
 source $DOTFILES/zsh/aliases.zsh
 source $DOTFILES/zsh/fpath.zsh
 source $DOTFILES/git/aliases.zsh
-
-export ZPLUG_HOME=$HOME/.zplug
-source $DOTFILES/zplug/zplug.zsh
-zplug load
-
-# Completions
 source $DOTFILES/zsh/completion.zsh
 source $DOTFILES/fzf/completion.zsh
+
+# Completions
 source $DOTFILES/pip/completion.zsh
+
+# Plugins
+source $DOTFILES/zsh/plugins/lwis/zsh-theme/theme.zsh
+source $DOTFILES/zsh/plugins/zsh-users/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $DOTFILES/zsh/plugins/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
