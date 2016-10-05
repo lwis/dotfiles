@@ -32,8 +32,7 @@
       "!include_dir_merge_list"
       "!include_dir_merge_named"
     ]
-  "linter-pylama":
-    usePep257: false
+  "linter-pylama": {}
   "one-dark-ui":
     layoutMode: "Compact"
   "spell-check":

@@ -1,9 +1,11 @@
-function a()
+function e()
 {
     if [ -d $1 ]; then
         cd $1 && atom .
     elif [ -f $1 ]; then
         cd dirname $1 && atom $1
+    elif [ "$1" = "" ]; then
+        atom .
     else
         atom $1
     fi

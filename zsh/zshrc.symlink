@@ -30,6 +30,9 @@ source $DOTFILES/git/aliases.zsh
 source $DOTFILES/zsh/completion.zsh
 source $DOTFILES/fzf/completion.zsh
 
+zstyle ':completion:*' menu yes select
+autoload -Uz compinit && compinit
+
 # Completions
 source $DOTFILES/pip/completion.zsh
 
