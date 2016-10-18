@@ -24,24 +24,47 @@ then
     # Show the ~/Library folder.
     chflags nohidden ~/Library
 
-    # Set a really fast key repeat.
-    defaults write NSGlobalDomain KeyRepeat -int 0
+    # Set a blazingly fast keyboard repeat rate
+    defaults write NSGlobalDomain KeyRepeat -int 1
+    defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
     # Set the Finder prefs for showing a few different volumes on the Desktop.
     defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
     defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
-    # Run the screensaver if we're in the bottom-left hot corner.
-    defaults write com.apple.dock wvous-bl-corner -int 5
-    defaults write com.apple.dock wvous-bl-modifier -int 0
-
     # Hide Safari's bookmark bar.
     defaults write com.apple.Safari ShowFavoritesBar -bool false
 
-    # Set up Safari for development.
-    defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
-    defaults write com.apple.Safari IncludeDevelopMenu -bool true
-    defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-    defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
-    defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+    # Use plain text mode for new TextEdit documents
+    defaults write com.apple.TextEdit RichText -int 0
+    # Open and save files as UTF-8 in TextEdit
+    defaults write com.apple.TextEdit PlainTextEncoding -int 4
+    defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
+
+    # Enable the debug menu in Disk Utility
+    defaults write com.apple.DiskUtility DUDebugMenuEnabled -bool true
+    defaults write com.apple.DiskUtility advanced-image-options -bool true
+
+    # Prevent Time Machine from prompting to use new hard drives as backup volume
+    defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+
+    ###############################################################################
+    # Photos                                                                      #
+    ###############################################################################
+
+    # Prevent Photos from opening automatically when devices are plugged in
+    defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
+    ###############################################################################
+    # Mac App Store                                                               #
+    ###############################################################################
+
+    # Enable the automatic update check
+    defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
+
+    # Check for software updates daily, not just once per week
+    defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+
+    # Download newly available updates in background
+    defaults write com.apple.SoftwareUpdate AutomaticDownload -int 1
 fi

@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# Amend last commit
+
+git add .
+git commit --amend
