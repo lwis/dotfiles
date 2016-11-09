@@ -13,6 +13,7 @@
     ~/.gitignore: git/gitignore.symlink
     ~/.nanorc: nano/nanorc.symlink
     ~/.nano: nano.symlink
+    ~/Library/Application Support/Sublime Text 3/Packages/User: sublime.symlink
 
 - shell:
   - [~/.dotfiles/apt/install.sh, "Installing Apt packages"]

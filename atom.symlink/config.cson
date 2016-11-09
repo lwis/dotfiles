@@ -1,4 +1,7 @@
 "*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "65b6b54f-75bd-471f-88c3-0b0c5f340199"
   "autocomplete-plus":
     autoActivationDelay: 500
     confirmCompletion: "enter"
@@ -7,8 +10,21 @@
       "background-tips"
       "exception-reporting"
       "metrics"
+      "language-python"
     ]
     hideGitIgnoredFiles: true
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      ".pioenvs"
+      ".piolibdeps"
+      ".clang_complete"
+      ".gcc-flags.json"
+    ]
     telemetryConsent: "no"
     useCustomTitleBar: true
   "custom-title":
@@ -40,6 +56,13 @@
   "linter-pylama": {}
   "one-dark-ui":
     layoutMode: "Compact"
+  "platformio-ide":
+    showHomeScreen: false
+  "platformio-ide-terminal":
+    core:
+      autoRunCommand: "export PATH=/Users/Lewis/.dotfiles/atom.symlink/packages/platformio-ide/penv/bin:/usr/local/Frameworks/Python.framework/Versions/3.5/bin/python3:/Users/Lewis/.local/python/bin:/Users/Lewis/.jenv/shims:/Users/Lewis/Projects/go/bin:./bin:/Users/Lewis/.dotfiles/bin:/usr/local/opt/coreutils/libexec/gnubin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/Lewis/.fzf/bin"
+  "python-tools":
+    pythonPath: "/usr/local/Frameworks/Python.framework/Versions/3.5/bin/python3"
   "spell-check":
     grammars: [
       "text.plain"
@@ -49,7 +72,23 @@
     ]
   tabs:
     enableVcsColoring: true
+  "tool-bar":
+    position: "Left"
   "tree-view":
     hideIgnoredNames: true
   welcome:
     showOnStartup: false
+".console.python.text":
+  editor:
+    preferredLineLength: 128
+    tabLength: 4
+".python.regexp.source":
+  editor:
+    preferredLineLength: 128
+".python.source":
+  editor:
+    preferredLineLength: 128
+".python.text.traceback":
+  editor:
+    preferredLineLength: 128
+    tabLength: 4

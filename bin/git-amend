@@ -1,5 +1,6 @@
 #!/bin/sh
 #
-# Use the last commit message and amend your stuffs.
+# Amend last commit
 
-git commit --amend -C HEAD
+git add .
+git commit --amend
