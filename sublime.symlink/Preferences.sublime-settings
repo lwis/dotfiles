@@ -23,7 +23,7 @@
 	"bold_folder_labels": true,
 	"caret_style": "phase",
 	"close_windows_when_empty": true,
-	"color_scheme": "Packages/Boxy Theme/schemes/Boxy Solarized Dark.tmTheme",
+	"color_scheme": "Packages/Solarized Color Scheme/Solarized (dark).tmTheme",
 	"ensure_newline_at_eof_on_save": true,
 	"find_selected_text": true,
 	"folder_exclude_patterns":
