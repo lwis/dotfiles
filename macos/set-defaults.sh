@@ -45,7 +45,7 @@ then
     defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
     # Reveal IP address, hostname, OS version, etc. when clicking the clock
     # in the login window
-    defaults write com.apple.loginwindow AdminHostInfo HostName
+    sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
     # Disable smart quotes as they’re annoying when typing code
     defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
     # Disable smart dashes as they’re annoying when typing code
@@ -132,7 +132,6 @@ then
     defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
     defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
     defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
-    defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
     defaults write com.apple.finder _FXSortFoldersFirst -bool true
     # When performing a search, search the current folder by default
     defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
@@ -239,6 +238,7 @@ then
     # Screen                                                                      #
     ###############################################################################
 
+    sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Automatic Display Enabled" -bool false
     # Require password immediately after sleep or screen saver begins
     defaults write com.apple.screensaver askForPassword -int 1
     defaults write com.apple.screensaver askForPasswordDelay -int 0
@@ -251,6 +251,5 @@ then
     # Enable subpixel font rendering on non-Apple LCDs
     defaults write NSGlobalDomain AppleFontSmoothing -int 2
     # Enable HiDPI display modes (requires restart)
-    defaults write com.apple.windowserver DisplayResolutionEnabled -bool true
-
+    sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
 fi
