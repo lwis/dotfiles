@@ -24,7 +24,8 @@ then
     ###############################################################################
 
     # Set the theme to Dark.
-    defaults write .GlobalPreferences AppleInterfaceTheme Dark
+    defaults write NSGlobalDomain AppleInterfaceTheme Dark
+    defaults write NSGlobalDomain AppleInterfaceStyle Dark
     # Set standby delay to 24 hours (default is 1 hour)
     sudo pmset -a standbydelay 86400
     # Disable the sound effects on boot
@@ -48,8 +49,14 @@ then
     sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
     # Disable smart quotes as they’re annoying when typing code
     defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
-    # Disable smart dashes as they’re annoying when typing code
+    # Disable smart dashes as they’re annoying when typing codes
     defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
+    defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+    defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+    defaults write NSGlobalDomain NSAutomaticTextCompletionEnabled -bool true
+
+    defaults write NSGlobalDomain AppleActionOnDoubleClick None
 
     ###############################################################################
     # Other                                                                       #
@@ -79,8 +86,12 @@ then
     # Set a blazingly fast keyboard repeat rate
     defaults write NSGlobalDomain KeyRepeat -int 1
     defaults write NSGlobalDomain InitialKeyRepeat -int 10
-    # Disable mouse acceleration.
-    defaults write .GlobalPreferences com.apple.mouse.scaling -1
+    # Disable mouse acceleration
+    defaults write NSGlobalDomain com.apple.mouse.scaling -1
+    # Set trackpad acceleration
+    defaults write NSGlobalDomain com.apple.trackpad.scaling -float 0.875
+    # Set my force click preference
+    defaults write NSGlobalDomain com.apple.trackpad.forceClick -int 1
     # Trackpad: enable tap to click for this user and for the login screen
     defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
     defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
@@ -107,6 +118,7 @@ then
     sudo systemsetup -settimezone "Europe/London" > /dev/null
     # Disable auto-correct
     defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+    defaults write TrackpadThreeFingerHorizSwipeGesture -int 1
 
     ###############################################################################
     # Finder                                                                      #
