@@ -1,6 +1,7 @@
 export CLICOLOR=true
 
-fpath=(/usr/local/share/zsh-completions $DOTFILES/zsh/plugins/zsh-users/zsh-completions/src $DOTFILES/functions $fpath)
+# /usr/local/share/zsh-completions
+fpath=($DOTFILES/zsh/plugins/zsh-users/zsh-completions/src $DOTFILES/functions $fpath)
 
 autoload -U $DOTFILES/functions/*(:t)
 

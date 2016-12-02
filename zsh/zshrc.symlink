@@ -31,7 +31,13 @@ source $DOTFILES/zsh/completion.zsh
 source $DOTFILES/fzf/completion.zsh
 
 zstyle ':completion:*' menu yes select
-# autoload -Uz compinit && compinit
+
+autoload -Uz compinit
+if [[ $( date +'%Y%j' ) > $( date +'%Y%j' -r ~/.zcompdump ) ]]; then
+  compinit
+else
+  compinit -C
+fi
 
 # Completions
 source $DOTFILES/pip/completion.zsh
