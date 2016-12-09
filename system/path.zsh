@@ -8,18 +8,20 @@ function add_to_path()
 function add_to_manpath()
 {
     if [[ -d $1 && ! $MANPATH =~ ":$1" ]]; then
-        export PATH="$1:$MANPATH"
+        export MANPATH="$1:$MANPATH"
     fi
 }
 
+export BREW_ROOT=$HOME/.brew
+
 add_to_path /sbin
+add_to_path /bin
 add_to_path /usr/sbin
-add_to_path $HOME/.brew/sbin
-add_to_path $HOME/.brew/bin
+add_to_path /usr/bin
 add_to_path /usr/local/sbin
 add_to_path /usr/local/bin
-
-export BREW_ROOT=`brew --prefix`
+add_to_path $BREW_ROOT/sbin
+add_to_path $BREW_ROOT/bin
 
 add_to_manpath /usr/local/git/man
 add_to_manpath /usr/local/mysql/man

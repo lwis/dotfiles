@@ -12,10 +12,10 @@ then
 fi
 
 # Path
-source $DOTFILES/system/path.zsh
 source $DOTFILES/go/path.zsh
 source $DOTFILES/jenv/path.zsh
 source $DOTFILES/pip/path.zsh
+source $DOTFILES/system/path.zsh
 
 # Everything else
 source $DOTFILES/docker/functions.zsh
@@ -33,7 +33,7 @@ source $DOTFILES/fzf/completion.zsh
 zstyle ':completion:*' menu yes select
 
 autoload -Uz compinit
-if [[ $( date +'%Y%j' ) > $( date +'%Y%j' -r ~/.zcompdump ) ]]; then
+if [[ $( date +'%Y%j' ) > $( date +'%Y%j' -r ~/.zcompdump 2> /dev/null ) ]]; then
   compinit
 else
   compinit -C
