@@ -105,6 +105,10 @@
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
 	"indent_guide_options":
 	[
 		"draw_normal",
@@ -115,9 +119,14 @@
 	"material_theme_contrast_mode": true,
 	"overlay_scroll_bars": "enabled",
 	"remember_open_files": false,
+	"rulers":
+	[
+		79,
+		100,
+		120
+	],
 	"theme": "Boxy Solarized Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"word_wrap": false,
-    "rulers": [79, 100, 120],
+	"word_wrap": false
 }
