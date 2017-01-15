@@ -1,4 +1,3 @@
-MagicPython
 atom-beautify
 autocomplete-clang
 autocomplete-paths
@@ -7,6 +6,7 @@ build
 busy
 color-picker
 custom-title
+editorconfig
 file-icons
 jshint
 language-docker
@@ -22,12 +22,14 @@ linter-pep8
 linter-pylint
 linter-tidy
 linter-xmllint
+MagicPython
 markdown-pdf
 minimap
 platformio-ide
 platformio-ide-terminal
 pretty-json
 python-tools
+qolor
 script
 sort-lines
 tabs-to-spaces

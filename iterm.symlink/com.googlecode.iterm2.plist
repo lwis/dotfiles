@@ -356,6 +356,8 @@
 	<string>3606CA5E-9A3B-4BEE-AE6A-28F179D7C511</string>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
+	<key>NSNavLastRootDirectory</key>
+	<string>~</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -389,22 +391,32 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
-	<key>NSWindow Frame NSFontPanel</key>
-	<string>2857 261 778 257 1920 120 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>366 244 796 473 0 0 1920 1178 </string>
+	<string>250 523 796 473 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>132 75 935 507 0 0 1920 1178 </string>
+	<string>645 313 935 507 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>32 433 1145 635 0 0 1920 1178 </string>
+	<string>175 286 1649 635 0 0 1920 1178 </string>
+	<key>NSWindow Frame iTerm Window 10</key>
+	<string>614 354 935 507 0 0 1920 1058 </string>
+	<key>NSWindow Frame iTerm Window 11</key>
+	<string>74 512 935 507 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>58 338 935 507 0 0 1920 1178 </string>
+	<string>346 331 935 507 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>2251 124 935 477 1920 120 1920 1058 </string>
+	<string>106 448 935 507 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>2272 700 935 477 1920 120 1920 1057 </string>
+	<string>428 551 935 507 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
-	<string>2293 700 585 477 1920 120 1920 1057 </string>
+	<string>105 128 1600 923 0 0 1920 1178 </string>
+	<key>NSWindow Frame iTerm Window 6</key>
+	<string>66 597 935 507 0 0 1920 1178 </string>
+	<key>NSWindow Frame iTerm Window 7</key>
+	<string>254 367 935 507 0 0 1920 1058 </string>
+	<key>NSWindow Frame iTerm Window 8</key>
+	<string>206 33 935 507 0 0 1920 1058 </string>
+	<key>NSWindow Frame iTerm Window 9</key>
+	<string>104 315 935 507 0 0 1920 1058 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1130,14 +1142,12 @@
 	</array>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
-	<true/>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
-	<integer>0</integer>
+	<key>NoSyncInstallationId</key>
+	<string>ACF7CF7A-A554-49CE-8ECB-F2BF43FD00DC</string>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>501582904.23887199</real>
+	<real>502544115.453417</real>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -1178,15 +1188,19 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=71</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=37</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-11-26T11:02:01Z</date>
+	<date>2016-12-20T09:21:35Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
+	<key>findIgnoreCase_iTerm</key>
+	<true/>
+	<key>findRegex_iTerm</key>
+	<false/>
 	<key>iTerm Version</key>
 	<string>3.0.12</string>
 </dict>
