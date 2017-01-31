@@ -28,6 +28,7 @@ source $DOTFILES/zsh/aliases.zsh
 source $DOTFILES/zsh/fpath.zsh
 source $DOTFILES/git/aliases.zsh
 source $DOTFILES/zsh/completion.zsh
+source $DOTFILES/fzf/config.zsh
 source $DOTFILES/fzf/completion.zsh
 
 zstyle ':completion:*' menu yes select

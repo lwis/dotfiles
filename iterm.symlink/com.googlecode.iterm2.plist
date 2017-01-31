@@ -391,24 +391,26 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>650 590 620 392 0 0 1920 1178 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>250 523 796 473 0 0 1920 1178 </string>
+	<string>250 437 796 473 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>645 313 935 507 0 0 1920 1178 </string>
+	<string>177 105 935 507 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>175 286 1649 635 0 0 1920 1178 </string>
+	<string>121 551 935 507 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 10</key>
 	<string>614 354 935 507 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 11</key>
 	<string>74 512 935 507 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>346 331 935 507 0 0 1920 1178 </string>
+	<string>45 433 935 507 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>106 448 935 507 0 0 1920 1178 </string>
+	<string>745 120 935 507 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>428 551 935 507 0 0 1920 1178 </string>
+	<string>-1492 430 935 507 -1920 -120 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
-	<string>105 128 1600 923 0 0 1920 1178 </string>
+	<string>105 484 1201 507 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 6</key>
 	<string>66 597 935 507 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 7</key>
@@ -1192,7 +1194,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-12-20T09:21:35Z</date>
+	<date>2017-01-31T09:37:10Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>WordCharacters</key>
@@ -1202,6 +1204,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.12</string>
+	<string>3.0.13</string>
 </dict>
 </plist>

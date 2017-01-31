@@ -15,16 +15,23 @@
     ~/.nano: nano.symlink
     ~/.nanorc: nano/nanorc.symlink
     ~/.tmux.conf: tmux/tmux.conf.symlink
-    ~/.zshrc: zsh/zshrc.symlink
+    ~/.zshrc:
+      path: zsh/zshrc.symlink
+      force: true
     ~/Library/Application Support/Sublime Text 3/Packages/User:
       path: sublime.symlink
+      create: false
+      force: true
+    ~/config/sublime-text-3/Packages/User:
+      path: sublime.symlink
+      create: false
       force: true
 
 - shell:
     - [~/.dotfiles/homebrew/install.sh, "Installing Homebrew"]
     - [git submodule update --init --recursive, "Installing submodules"]
     - [~/.dotfiles/system/install.sh, "Setting default shell"]
-    - [~/.dotfiles/apt/install.sh, "Installing Apt packages"]
+    - [~/.dotfiles/packages/install.sh, "Installing Apt packages"]
     - [~/.dotfiles/atom/install.sh, "Installing Atom plugins"]
     - [~/.dotfiles/fzf/install.sh, "Installing fzf"]
     - command: ~/.dotfiles/git/install.sh

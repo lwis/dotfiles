@@ -39,7 +39,8 @@ then
   then
     echo "\033[00;32m──›\033[0m updating pacman"
     set +e
-    sudo pacman -Syu
+    sudo pacman -Scc
+    sudo pacman -Syua
     set -e
     echo
   fi
