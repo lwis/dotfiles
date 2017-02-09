@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"A File Icon",
 		"AdvancedNewFile",
 		"Alignment",
 		"All Autocomplete",
@@ -29,7 +30,6 @@
 		"SublimeLinter",
 		"SublimeLinter-json",
 		"SublimeLinter-pyyaml",
-		"Travis-CI",
-		"zz File Icons"
+		"Travis-CI"
 	]
 }

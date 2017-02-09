@@ -34,4 +34,4 @@ then
     export PATH="$BREW_ROOT/opt/coreutils/libexec/gnubin:$PATH"
 fi
 
-export PATH="./bin:$DOTFILES/bin:$PATH"
+export PATH="$DOTFILES/bin:$PATH"

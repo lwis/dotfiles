@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env zsh
 
 if test "$(whence apt 2> /dev/null)"
 then
@@ -10,4 +10,6 @@ if test "$(whence pacman 2> /dev/null)"
 then
     sudo pacman -Syu
     sudo pacman -S zsh tmux python3 python git nano
+    yaourt -Syu
+    yaourt -S powerline-fonts-git
 fi
