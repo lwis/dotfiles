@@ -1,7 +1,7 @@
 [include]
     path = ~/.gitconfig.local
 [hub]
-    protocol = https
+    protocol = ssh
 [alias]
     co = checkout
     rank-contributors = !$DOTFILES/bin/git-rank-contributors
@@ -25,9 +25,3 @@
     autocorrect = 1
 [push]
     default = simple
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
