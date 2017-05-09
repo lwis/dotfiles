@@ -10,15 +10,15 @@
 <key>name</key>
 <string>mon_color</string>
 <key>scope</key>
-<string>mcol_CC0000FF</string>
+<string>mcol_FFFFFFFF</string>
 <key>settings</key>
 <dict>
 <key>background</key>
-<string>#CC0000FF</string>
+<string>#FFFFFFFF</string>
 <key>foreground</key>
-<string>#FF3232FF</string>
+<string>#000000FF</string>
 <key>caret</key>
-<string>#FF3232FF</string>
+<string>#000000FF</string>
 </dict>
 </dict>
 
@@ -26,143 +26,15 @@
 <key>name</key>
 <string>mon_text_color</string>
 <key>scope</key>
-<string>mcol_text_CC0000FF</string>
+<string>mcol_text_FFFFFFFF</string>
 <key>settings</key>
 <dict>
 <key>background</key>
 <string>#002b37FF</string>
 <key>foreground</key>
-<string>#CC0000FF</string>
+<string>#FFFFFFFF</string>
 <key>caret</key>
-<string>#FF3232FF</string>
-</dict>
-</dict>
-
-<dict>
-<key>name</key>
-<string>mon_color</string>
-<key>scope</key>
-<string>mcol_FF0000FF</string>
-<key>settings</key>
-<dict>
-<key>background</key>
-<string>#FF0000FF</string>
-<key>foreground</key>
-<string>#4C0000FF</string>
-<key>caret</key>
-<string>#4C0000FF</string>
-</dict>
-</dict>
-
-<dict>
-<key>name</key>
-<string>mon_text_color</string>
-<key>scope</key>
-<string>mcol_text_FF0000FF</string>
-<key>settings</key>
-<dict>
-<key>background</key>
-<string>#002b37FF</string>
-<key>foreground</key>
-<string>#FF0000FF</string>
-<key>caret</key>
-<string>#4C0000FF</string>
-</dict>
-</dict>
-
-<dict>
-<key>name</key>
-<string>mon_color</string>
-<key>scope</key>
-<string>mcol_FF9900FF</string>
-<key>settings</key>
-<dict>
-<key>background</key>
-<string>#FF9900FF</string>
-<key>foreground</key>
-<string>#4C2D00FF</string>
-<key>caret</key>
-<string>#4C2D00FF</string>
-</dict>
-</dict>
-
-<dict>
-<key>name</key>
-<string>mon_text_color</string>
-<key>scope</key>
-<string>mcol_text_FF9900FF</string>
-<key>settings</key>
-<dict>
-<key>background</key>
-<string>#002b37FF</string>
-<key>foreground</key>
-<string>#FF9900FF</string>
-<key>caret</key>
-<string>#4C2D00FF</string>
-</dict>
-</dict>
-
-<dict>
-<key>name</key>
-<string>mon_color</string>
-<key>scope</key>
-<string>mcol_008000FF</string>
-<key>settings</key>
-<dict>
-<key>background</key>
-<string>#008000FF</string>
-<key>foreground</key>
-<string>#7FFF7FFF</string>
-<key>caret</key>
-<string>#7FFF7FFF</string>
-</dict>
-</dict>
-
-<dict>
-<key>name</key>
-<string>mon_text_color</string>
-<key>scope</key>
-<string>mcol_text_008000FF</string>
-<key>settings</key>
-<dict>
-<key>background</key>
-<string>#002b37FF</string>
-<key>foreground</key>
-<string>#008000FF</string>
-<key>caret</key>
-<string>#7FFF7FFF</string>
-</dict>
-</dict>
-
-<dict>
-<key>name</key>
-<string>mon_color</string>
-<key>scope</key>
-<string>mcol_36a64fFF</string>
-<key>settings</key>
-<dict>
-<key>background</key>
-<string>#36a64fFF</string>
-<key>foreground</key>
-<string>#12391BFF</string>
-<key>caret</key>
-<string>#12391BFF</string>
-</dict>
-</dict>
-
-<dict>
-<key>name</key>
-<string>mon_text_color</string>
-<key>scope</key>
-<string>mcol_text_36a64fFF</string>
-<key>settings</key>
-<dict>
-<key>background</key>
-<string>#002b37FF</string>
-<key>foreground</key>
-<string>#36a64fFF</string>
-<key>caret</key>
-<string>#12391BFF</string>
+<string>#000000FF</string>
 </dict>
 </dict>
 
@@ -187,52 +59,6 @@
 				<string>#2c4c55</string>
 				<key>selectionBorder</key>
 				<string>#586e75</string>
-				<!-- Default looks best really -->
-				<!-- <key>findHighlight</key> -->
-				<!-- <string>#dddd45</string> -->
-				<!-- <key>findHighlightForeground</key> -->
-				<!-- <string>#fdf6e3</string> -->
-
-				<key>popupCss</key>
-				<string><![CDATA[
-					html {
-						background-color: #002b36;
-						color: #839496;
-					}
-					a {
-						color: #2aa198;
-					}
-					.error, .deleted {
-						color: #dc322f;
-					}
-					.success, .inserted {
-						color: #859900;
-					}
-					.warning, .modified {
-						color: #b58900;
-					}
-				]]></string>
-
-				<key>phantomCss</key>
-				<string><![CDATA[
-					html {
-						background-color: #2C4C55;
-						color: #93a1a1;
-					}
-					a {
-						color: #2aa198;
-					}
-					.error, .deleted {
-						color: #dc322f;
-					}
-					.success, .inserted {
-						color: #859900;
-					}
-					.warning, .modified {
-						color: #b58900;
-					}
-				]]></string>
-
 			</dict>
 		</dict>
 

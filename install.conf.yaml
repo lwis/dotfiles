@@ -22,7 +22,7 @@
       path: sublime.symlink
       create: false
       force: true
-    ~/config/sublime-text-3/Packages/User:
+    ~/.config/sublime-text-3/Packages/User:
       path: sublime.symlink
       create: false
       force: true

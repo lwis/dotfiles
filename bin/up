@@ -39,8 +39,9 @@ then
   then
     echo "\033[00;32m──›\033[0m updating pacman"
     set +e
-    sudo pacman -Sycc
-    sudo pacman -Syu
+    sudo pacman -Scc --noconfirm
+    pacaur -Syu
+    sudo pacman -Rns $(pacman -Qtdq)
     set -e
     echo
   fi
@@ -110,5 +111,3 @@ then
   echo "\033[00;32m──›\033[0m OS X Software Update"
   softwareupdate -l
 fi
-
-rm -f ~/.zcompdump
