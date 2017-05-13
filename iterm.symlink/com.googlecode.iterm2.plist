@@ -393,28 +393,33 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
+	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
+	<dict>
+		<key>TB Is Shown</key>
+		<integer>1</integer>
+	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>1382 125 445 103 0 0 1920 1058 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>650 590 620 392 0 0 1920 1178 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>361 137 918 495 0 0 1920 1058 </string>
+	<string>828 460 918 495 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>39 457 935 507 0 0 1920 1178 </string>
+	<string>0 551 935 507 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1 265 1915 715 0 0 1920 1178 </string>
+	<string>0 74 935 507 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 10</key>
 	<string>614 354 935 507 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 11</key>
 	<string>74 512 935 507 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>693 85 935 507 0 0 1920 1178 </string>
+	<string>0 551 1425 507 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>944 358 935 507 0 0 1920 1058 </string>
+	<string>0 423 935 507 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>78 358 935 507 0 0 1920 1058 </string>
+	<string>257 25 935 507 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
-	<string>105 484 935 507 0 0 1920 1058 </string>
+	<string>0 316 935 507 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 6</key>
 	<string>66 597 935 507 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 7</key>
@@ -1200,7 +1205,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-02-15T10:55:00Z</date>
+	<date>2017-05-05T08:46:18Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>WordCharacters</key>
@@ -1210,6 +1215,10 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.14</string>
+	<string>3.0.15</string>
+	<key>kCPKSelectionViewPreferredModeKey</key>
+	<integer>0</integer>
+	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
+	<false/>
 </dict>
 </plist>

@@ -26,9 +26,6 @@
       ".gcc-flags.json"
     ]
     telemetryConsent: "no"
-    useCustomTitleBar: true
-  "custom-title":
-    template: "<%= relativeFilePath %>"
   editor:
     backUpBeforeSaving: true
     fontSize: 12
@@ -51,14 +48,11 @@
       "!include_dir_merge_named"
       "!secret"
     ]
-  "linter-pylama": {}
   "linter-ui-default":
     showPanel: true
     useBusySignal: false
   "one-dark-ui":
     layoutMode: "Compact"
-  "platformio-ide":
-    showHomeScreen: false
   "spell-check":
     grammars: [
       "text.plain"

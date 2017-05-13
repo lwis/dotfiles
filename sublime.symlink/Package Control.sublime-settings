@@ -19,6 +19,7 @@
 		"EditorConfig",
 		"Git",
 		"GitGutter",
+		"Indent XML",
 		"JSONLint",
 		"Logstash Syntax Highlighting",
 		"Package Control",
