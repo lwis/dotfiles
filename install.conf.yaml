@@ -2,12 +2,18 @@
     link:
       relink: true
       create: true
+    shell:
+      stdin: true
+      stdout: false
+      stderr: true
 
 - clean: ['~']
 
 - link:
+    ~/.config/argos: argos.symlink
     ~/.atom: atom.symlink
     ~/.editorconfig: editorconfig.symlink
+    ~/.emacs.d: emacs.d.symlink
     ~/.gitconfig.local: git/gitconfig.local.symlink
     ~/.gitconfig: git/gitconfig.symlink
     ~/.gitignore: git/gitignore.symlink
@@ -22,24 +28,21 @@
       path: sublime.symlink
       create: false
       force: true
-    ~/config/sublime-text-3/Packages/User:
+    ~/.config/sublime-text-3/Packages/User:
       path: sublime.symlink
       create: false
       force: true
 
 - shell:
-    - [~/.dotfiles/homebrew/install.sh, "Installing Homebrew"]
-    - [git submodule update --init --recursive, "Installing submodules"]
-    - [~/.dotfiles/system/install.sh, "Setting default shell"]
-    - [~/.dotfiles/packages/install.sh, "Installing Apt packages"]
-    - [~/.dotfiles/atom/install.sh, "Installing Atom plugins"]
-    - [~/.dotfiles/fzf/install.sh, "Installing fzf"]
-    - command: ~/.dotfiles/git/install.sh
-      stdin: true
+    - command: ~/.dotfiles/homebrew/install.sh
+    - command: git submodule update --init --recursive
       stdout: true
-    - [~/.dotfiles/macos/set-defaults.sh, "Setting macOS defaults"]
-    - [~/.dotfiles/pip/install.sh, "Installing pip"]
-    - [~/.dotfiles/tmux/install.sh, "Installing tmux"]
+    - command: ~/.dotfiles/system/install.sh
+    - command: ~/.dotfiles/atom/install.sh
+    - command: ~/.dotfiles/fzf/install.sh
+    - command: ~/.dotfiles/git/install.sh
+    - command: ~/.dotfiles/macos/set-defaults.sh
+    - command: ~/.dotfiles/pip/install.sh
+    - command: ~/.dotfiles/tmux/install.sh
     - command: ~/.dotfiles/bin/up
-      stdin: true
       stdout: true

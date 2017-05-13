@@ -9,6 +9,7 @@ else
     echo "\033[00;32m──›\033[0m updating dotfiles"
     if test "$(git -C $DOTFILES pull)" != "Already up-to-date."
     then
+        dot
         exit
     fi
 fi
@@ -39,12 +40,15 @@ then
   then
     echo "\033[00;32m──›\033[0m updating pacman"
     set +e
-    sudo pacman -Sycc
-    sudo pacman -Syu
+    sudo pacman -Scc --noconfirm
+    pacaur -Syu
+    sudo pacman -Rns $(pacman -Qtdq)
     set -e
     echo
   fi
 fi
+
+git -C $DOTFILES submodule foreach git pull origin master
 
 if test "$(whence 'xcode-select' 2> /dev/null)"
 then
@@ -110,5 +114,3 @@ then
   echo "\033[00;32m──›\033[0m OS X Software Update"
   softwareupdate -l
 fi
-
-rm -f ~/.zcompdump

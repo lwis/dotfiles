@@ -28,8 +28,7 @@
     telemetryConsent: "no"
   editor:
     backUpBeforeSaving: true
-    fontSize: 12
-    invisibles: {}
+    fontFamily: "Hack"
     preferredLineLength: 128
     scrollPastEnd: true
     showIndentGuide: true

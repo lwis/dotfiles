@@ -2,7 +2,7 @@
 
 set -e
 
-DOTFILES="~/.dotfiles"
+DOTFILES=$(realpath ~/.dotfiles)
 
 CONFIG="install.conf.yaml"
 DOTBOT_DIR="dotbot"
