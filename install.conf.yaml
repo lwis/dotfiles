@@ -2,12 +2,18 @@
     link:
       relink: true
       create: true
+    shell:
+      stdin: true
+      stdout: true
+      stderr: true
 
 - clean: ['~']
 
 - link:
+    ~/.config/argos: argos.symlink
     ~/.atom: atom.symlink
     ~/.editorconfig: editorconfig.symlink
+    ~/.emacs.d: emacs.d.symlink
     ~/.gitconfig.local: git/gitconfig.local.symlink
     ~/.gitconfig: git/gitconfig.symlink
     ~/.gitignore: git/gitignore.symlink
@@ -31,15 +37,10 @@
     - [~/.dotfiles/homebrew/install.sh, "Installing Homebrew"]
     - [git submodule update --init --recursive, "Installing submodules"]
     - [~/.dotfiles/system/install.sh, "Setting default shell"]
-    - [~/.dotfiles/packages/install.sh, "Installing Apt packages"]
     - [~/.dotfiles/atom/install.sh, "Installing Atom plugins"]
     - [~/.dotfiles/fzf/install.sh, "Installing fzf"]
-    - command: ~/.dotfiles/git/install.sh
-      stdin: true
-      stdout: true
+    - [~/.dotfiles/git/install.sh, "Setting up Git"]
     - [~/.dotfiles/macos/set-defaults.sh, "Setting macOS defaults"]
     - [~/.dotfiles/pip/install.sh, "Installing pip"]
     - [~/.dotfiles/tmux/install.sh, "Installing tmux"]
-    - command: ~/.dotfiles/bin/up
-      stdin: true
-      stdout: true
+    - [~/.dotfiles/bin/up, "Updating"]

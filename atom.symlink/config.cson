@@ -32,8 +32,6 @@
   editor:
     backUpBeforeSaving: true
     fontFamily: "Hack"
-    fontSize: 12
-    invisibles: {}
     preferredLineLength: 128
     scrollPastEnd: true
     showIndentGuide: true
