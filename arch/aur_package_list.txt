@@ -12,6 +12,7 @@ gpmdp
 jetbrains-toolbox
 keeweb-desktop
 libinput-gestures
+linux-mainline
 neofetch
 nerd-fonts-complete
 numix-circle-icon-theme-git

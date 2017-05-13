@@ -10,6 +10,7 @@ deja-dup
 deluge
 docker-compose
 efibootmgr
+emacs
 empathy
 eog
 epiphany
@@ -37,6 +38,7 @@ make
 mousetweaks
 net-tools
 network-manager-applet
+networkmanager-openvpn
 noto-fonts
 patch
 pavucontrol
@@ -75,5 +77,6 @@ xorg-xsetroot
 xorg-xvinfo
 xorg-xwd
 xorg-xwud
+yarn
 yubikey-personalization
 zsh-syntax-highlighting
