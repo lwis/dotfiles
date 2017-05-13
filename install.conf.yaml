@@ -4,7 +4,7 @@
       create: true
     shell:
       stdin: true
-      stdout: true
+      stdout: false
       stderr: true
 
 - clean: ['~']
@@ -34,13 +34,15 @@
       force: true
 
 - shell:
-    - [~/.dotfiles/homebrew/install.sh, "Installing Homebrew"]
-    - [git submodule update --init --recursive, "Installing submodules"]
-    - [~/.dotfiles/system/install.sh, "Setting default shell"]
-    - [~/.dotfiles/atom/install.sh, "Installing Atom plugins"]
-    - [~/.dotfiles/fzf/install.sh, "Installing fzf"]
-    - [~/.dotfiles/git/install.sh, "Setting up Git"]
-    - [~/.dotfiles/macos/set-defaults.sh, "Setting macOS defaults"]
-    - [~/.dotfiles/pip/install.sh, "Installing pip"]
-    - [~/.dotfiles/tmux/install.sh, "Installing tmux"]
-    - [~/.dotfiles/bin/up, "Updating"]
+    - command: ~/.dotfiles/homebrew/install.sh
+    - command: git submodule update --init --recursive
+      stdout: true
+    - command: ~/.dotfiles/system/install.sh
+    - command: ~/.dotfiles/atom/install.sh
+    - command: ~/.dotfiles/fzf/install.sh
+    - command: ~/.dotfiles/git/install.sh
+    - command: ~/.dotfiles/macos/set-defaults.sh
+    - command: ~/.dotfiles/pip/install.sh
+    - command: ~/.dotfiles/tmux/install.sh
+    - command: ~/.dotfiles/bin/up
+      stdout: true
