@@ -2,6 +2,8 @@
 
 set -e
 
+git -C $DOTFILES submodule foreach git pull origin master
+
 if [[ $(git -C $DOTFILES diff --shortstat 2> /dev/null | tail -n1) != "" ]]
 then
     echo "\033[1;31m──›\033[0m dotfiles are dirty, skipping"
