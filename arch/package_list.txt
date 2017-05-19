@@ -36,10 +36,11 @@ htop
 lm_sensors
 make
 mousetweaks
+mpv
 net-tools
 network-manager-applet
 networkmanager-openvpn
-noto-fonts
+noto-fonts-emoji
 patch
 pavucontrol
 pkg-config
@@ -50,7 +51,6 @@ tlp-rdw
 tmux
 totem
 ttf-hack
-ttf-overpass
 wget
 xdg-user-dirs-gtk
 xf86-video-intel
