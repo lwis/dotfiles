@@ -50,8 +50,6 @@
   "linter-ui-default":
     showPanel: true
     useBusySignal: false
-  "one-dark-ui":
-    layoutMode: "Compact"
   "spell-check":
     grammars: [
       "text.plain"
