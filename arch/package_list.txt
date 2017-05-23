@@ -1,5 +1,6 @@
 alsa-utils
 arc-gtk-theme
+atom
 autoconf
 automake
 baobab
@@ -31,9 +32,9 @@ gnome-terminal
 gnome-tweak-tool
 gnome-user-docs
 gparted
+gradle
 gucharmap
 htop
-lm_sensors
 make
 mousetweaks
 mpv
@@ -78,5 +79,4 @@ xorg-xvinfo
 xorg-xwd
 xorg-xwud
 yarn
-yubikey-personalization
 zsh-syntax-highlighting

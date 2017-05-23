@@ -1,7 +1,6 @@
 albert
 android-sdk
 android-studio-canary
-atom-editor-bin
 corebird
 cower
 dropbox
@@ -25,3 +24,4 @@ telegram-desktop-bin
 ttf-google-fonts-git
 ttf-meslo
 ttf-ms-fonts
+ttf-tahoma
