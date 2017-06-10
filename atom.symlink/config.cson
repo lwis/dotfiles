@@ -48,6 +48,7 @@
       "!secret"
     ]
   "linter-ui-default":
+    panelHeight: 69
     showPanel: true
     useBusySignal: false
   "spell-check":
