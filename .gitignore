@@ -8,6 +8,7 @@ atom.symlink/storage
 atom.symlink/themes
 atom.symlink/recovery
 atom.symlink/nohup.out
+atom.symlink/github.cson
 
 git/gitconfig.local.symlink
 

@@ -42,7 +42,7 @@ then
     set +e
     sudo pacaur -Scc --noconfirm
     pacaur -Syu
-    sudo pacaur -Rns $(pacman -Qtdq)
+    sudo pacman -Rns $(pacman -Qtdq)
     set -e
     echo
   fi

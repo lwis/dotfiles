@@ -1,8 +1,10 @@
 android-sdk
 android-studio-canary
 caffeine-ng-git
+chrome-gnome-shell-git
 corebird
 cower
+discord
 dropbox
 etcher
 feedreader
@@ -31,6 +33,7 @@ numix-icon-theme-git
 pacaur
 postman-bin
 python-ewmh
+snapper-gui-git
 streamlink-twitch-gui-git
 sublime-text-dev
 telegram-desktop-bin
