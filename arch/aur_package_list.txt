@@ -1,5 +1,4 @@
 android-sdk
-android-studio-canary
 caffeine-ng-git
 chrome-gnome-shell-git
 corebird
@@ -25,6 +24,8 @@ gtkd
 jetbrains-toolbox
 keeweb-desktop
 keybase-bin
+libc++
+libc++abi
 nautilus-ext-git
 neofetch
 nerd-fonts-complete
