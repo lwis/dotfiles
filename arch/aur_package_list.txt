@@ -35,7 +35,6 @@ pacaur
 postman-bin
 python-ewmh
 snapper-gui-git
-streamlink-twitch-gui-git
 sublime-text-dev
 telegram-desktop-bin
 tilix

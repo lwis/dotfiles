@@ -1,5 +1,6 @@
 acpi
 alsa-utils
+android-tools
 arc-gtk-theme
 atom
 autoconf
@@ -22,6 +23,7 @@ flex
 gdm
 gitg
 gnome-backgrounds
+gnome-boxes
 gnome-calculator
 gnome-calendar
 gnome-contacts
