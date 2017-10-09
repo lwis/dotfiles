@@ -8,6 +8,7 @@ dropbox
 etcher
 feedreader
 gitter
+glib
 gnome-shell-extension-arch-update
 gnome-shell-extension-battery-status-git
 gnome-shell-extension-clipboard-indicator-git
@@ -20,10 +21,12 @@ gnome-shell-extension-openweather-git
 gnome-shell-extension-topicons-plus-git
 google-chrome
 gpmdp
+gtk-youtube-viewer
 gtkd
 jetbrains-toolbox
 keeweb-desktop
 keybase-bin
+kodi-addon-pvr-hts
 libc++
 libc++abi
 nautilus-ext-git

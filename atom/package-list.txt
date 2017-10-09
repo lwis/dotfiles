@@ -1,6 +1,5 @@
 MagicPython
 atom-beautify
-autocomplete-paths
 autocomplete-python
 editorconfig
 file-icons

@@ -2,6 +2,8 @@
   "atom-beautify":
     general:
       _analyticsUserId: "65b6b54f-75bd-471f-88c3-0b0c5f340199"
+  "autocomplete-paths":
+    maxFileCount: 30000
   "autocomplete-plus":
     autoActivationDelay: 500
     confirmCompletion: "enter"
@@ -48,7 +50,6 @@
       "!secret"
     ]
   "linter-ui-default":
-    panelHeight: 69
     useBusySignal: false
   "spell-check":
     grammars: [
