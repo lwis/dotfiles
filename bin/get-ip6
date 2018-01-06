@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+ip=$(dig +short -6 myip.opendns.com aaaa @resolver1.ipv6-sandbox.opendns.com)
+
+echo $ip
+
+if test "$(uname)" = "Darwin"
+then
+    echo $ip | pbcopy
+fi

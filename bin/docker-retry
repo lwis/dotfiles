@@ -6,8 +6,10 @@ read -p "Are you sure? " -n 1 -r
 
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
+    set +e
     docker-compose pull $1
-    docker-compose build $1
+    set -e
+    docker-compose build --pull $1
     docker-compose stop $1
     docker-compose rm -v --force $1
     docker-compose up -d $1
