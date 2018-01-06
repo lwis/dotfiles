@@ -44,5 +44,3 @@
     - command: ~/.dotfiles/macos/set-defaults.sh
     - command: ~/.dotfiles/pip/install.sh
     - command: ~/.dotfiles/tmux/install.sh
-    - command: ~/.dotfiles/bin/up
-      stdout: true
