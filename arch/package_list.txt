@@ -15,13 +15,14 @@ deja-dup
 deluge
 dialog
 docker-compose
-efibootmgr
 emacs
 empathy
 eog
+expac
 fakeroot
 firefox
 flex
+fwupd
 gdm
 gitg
 gnome-backgrounds
@@ -42,6 +43,7 @@ gnome-user-docs
 gnu-netcat
 gparted
 gradle
+gthumb
 gucharmap
 htop
 hugin
@@ -55,8 +57,10 @@ neovim
 net-tools
 network-manager-applet
 networkmanager-openvpn
+nfs-utils
 patch
 pavucontrol
+pkg-config
 polari
 powertop
 sushi
@@ -65,8 +69,8 @@ tmux
 totem
 traceroute
 ttf-hack
+virtualbox
 vlc
-wget
 wpa_actiond
 xdg-user-dirs-gtk
 xf86-video-intel

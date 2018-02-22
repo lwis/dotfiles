@@ -31,7 +31,6 @@
   editor:
     backUpBeforeSaving: true
     fontFamily: "Hack"
-    fontSize: 15
     preferredLineLength: 128
     scrollPastEnd: true
     showIndentGuide: true
@@ -51,7 +50,6 @@
       "!secret"
     ]
   "linter-ui-default":
-    panelHeight: 69
     useBusySignal: false
   "spell-check":
     grammars: [

@@ -42,9 +42,9 @@ then
   then
     echo "\033[00;32m──›\033[0m updating pacman"
     set +e
-    sudo pacaur -Scc --noconfirm
-    pacaur -Syu
-    sudo pacman -Rns $(pacman -Qtdq)
+    yay -Syu
+    yay -Rns $(yay -Qtdq)
+    sudo pacman -Scc --noconfirm
     set -e
     echo
   fi
