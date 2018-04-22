@@ -1,6 +1,6 @@
 #!/bin/sh
-pacman -Qqet | grep -v "$(pacman -Qqg base)" | grep -v "$(pacman -Qqm)" > package_list.txt # community
-pacman -Qqm > aur_package_list.txt # aur
+#pacman -Qqet | grep -v "$(pacman -Qqg base)" | grep -v "$(pacman -Qqm)" > package_list.txt # community
+#pacman -Qqm > aur_package_list.txt # aur
 
 
 # dconf dump /org/gnome/terminal/legacy/profiles:/

@@ -25,5 +25,8 @@
     autocorrect = 1
 [push]
     default = simple
+[pull]
+    ff = yes
 [merge]
     renameLimit = 5000
+    ff = no

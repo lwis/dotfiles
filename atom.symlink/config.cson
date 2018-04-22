@@ -30,7 +30,7 @@
     telemetryConsent: "no"
   editor:
     backUpBeforeSaving: true
-    fontFamily: "Hack"
+    fontFamily: "Overpass Mono"
     preferredLineLength: 128
     scrollPastEnd: true
     showIndentGuide: true

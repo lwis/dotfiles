@@ -4,13 +4,14 @@
       create: true
     shell:
       stdin: true
-      stdout: false
+      stdout: true
       stderr: true
 
 - clean: ['~']
 
 - link:
     ~/.config/argos: argos.symlink
+    ~/.config/sway/config: sway/config.symlink
     ~/.atom: atom.symlink
     ~/.editorconfig: editorconfig.symlink
     ~/.emacs.d: emacs.d.symlink
@@ -21,6 +22,7 @@
     ~/.nano: nano.symlink
     ~/.nanorc: nano/nanorc.symlink
     ~/.tmux.conf: tmux/tmux.conf.symlink
+    ~/.makepkg.conf: system/makepkg.conf.symlink
     ~/.zshrc:
       path: zsh/zshrc.symlink
       force: true
@@ -36,11 +38,10 @@
 - shell:
     - command: ~/.dotfiles/homebrew/install.sh
     - command: git submodule update --init --recursive
-      stdout: true
     - command: ~/.dotfiles/system/install.sh
-    - command: ~/.dotfiles/atom/install.sh
     - command: ~/.dotfiles/fzf/install.sh
     - command: ~/.dotfiles/git/install.sh
     - command: ~/.dotfiles/macos/set-defaults.sh
     - command: ~/.dotfiles/pip/install.sh
     - command: ~/.dotfiles/tmux/install.sh
+    - command: ~/.dotfiles/atom/install.sh
