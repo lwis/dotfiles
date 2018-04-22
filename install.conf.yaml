@@ -26,14 +26,6 @@
     ~/.zshrc:
       path: zsh/zshrc.symlink
       force: true
-    ~/Library/Application Support/Sublime Text 3/Packages/User:
-      path: sublime.symlink
-      create: false
-      force: true
-    ~/.config/sublime-text-3/Packages/User:
-      path: sublime.symlink
-      create: false
-      force: true
 
 - shell:
     - command: ~/.dotfiles/homebrew/install.sh

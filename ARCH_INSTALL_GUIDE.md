@@ -133,3 +133,6 @@ Change `/etc/lvm/lvm.conf` to `issue_discards = 1`.
 `# systemctl enable fstrim.timer`
 
 `# systemctl start fstrim.service`
+
+
+https://wiki.archlinux.org/index.php/Swap#Swappiness
