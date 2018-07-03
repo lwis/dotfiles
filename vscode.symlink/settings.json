@@ -1,11 +1,30 @@
 {
+    "window.restoreWindows": "none",
+    
+    "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "Darcula",
+    
     "go.coverOnSave": true,
     "go.coverageOptions": "showUncoveredCodeOnly",
     "go.testTimeout": "5s",
     "go.testOnSave": true,
-    "gitlens.advanced.messages": {
-        "suppressShowKeyBindingsNotice": true
+    "go.liveErrors": {
+        "enabled": true,
+        "delay": 500
     },
-    "workbench.iconTheme": "material-icon-theme",
+
+    "git.autofetch": true,
+    "git.promptToSaveFilesBeforeCommit": true,
+    
+    "files.autoSave": "onFocusChange",
+
+    "editor.rulers": [
+        79,
+        120
+    ],
+    "editor.tabCompletion": true,
+
+    "explorer.openEditors.visible": 0,
+
+    "terminal.external.osxExec": "iTerm.app",
 }

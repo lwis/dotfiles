@@ -7,14 +7,10 @@ if test "$(which code)"; then
     VSCODE_HOME="$HOME/.config/Code"
   fi
 
-  ln -sf "$DOTFILES/vscode/settings.json" "$VSCODE_HOME/User/settings.json"
-  ln -sf "$DOTFILES/vscode/keybindings.json" "$VSCODE_HOME/User/keybindings.json"
-
   modules="
     aaron-bond.better-comments
     bungcip.better-toml
     carolynvs.dep
-    eamodio.gitlens
     eg2.tslint
     HookyQR.beautify
     ms-python.python
