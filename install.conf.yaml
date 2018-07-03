@@ -23,6 +23,14 @@
     ~/.nanorc: nano/nanorc.symlink
     ~/.tmux.conf: tmux/tmux.conf.symlink
     ~/.makepkg.conf: system/makepkg.conf.symlink
+    ~/Library/Application Support/Code/User:
+      path: vscode.symlink
+      create: false
+      force: true
+    ~/.config/Code/User:
+      path: vscode.symlink
+      create: false
+      force: true
     ~/.zshrc:
       path: zsh/zshrc.symlink
       force: true
@@ -36,4 +44,5 @@
     - command: ~/.dotfiles/macos/set-defaults.sh
     - command: ~/.dotfiles/pip/install.sh
     - command: ~/.dotfiles/tmux/install.sh
+    - command: ~/.dotfiles/vscode/install.sh
     - command: ~/.dotfiles/atom/install.sh

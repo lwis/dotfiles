@@ -1,0 +1,11 @@
+{
+    "workbench.colorTheme": "Darcula",
+    "go.coverOnSave": true,
+    "go.coverageOptions": "showUncoveredCodeOnly",
+    "go.testTimeout": "5s",
+    "go.testOnSave": true,
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "workbench.iconTheme": "material-icon-theme",
+}

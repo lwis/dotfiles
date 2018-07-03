@@ -12,15 +12,5 @@ atom.symlink/github.cson
 
 git/gitconfig.local.symlink
 
-sublime.symlink/Package\ Control.last-run
-sublime.symlink/Package\ Control.ca-list
-sublime.symlink/Package\ Control.ca-bundle
-sublime.symlink/Package\ Control.system-ca-bundle
-sublime.symlink/Package\ Control.merged-ca-bundle
-sublime.symlink/Package\ Control.user-ca-bundle
-sublime.symlink/Package\ Control.cache/
-sublime.symlink/Package\ Control.ca-certs/
-sublime.symlink/oscrypto-ca-bundle.crt
-
-#Temp
-/emacs.d.symlink/
+vscode.symlink/snippets/
+vscode.symlink/workspaceStorage/
