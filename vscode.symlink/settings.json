@@ -1,9 +1,9 @@
 {
     "window.restoreWindows": "none",
-    
+
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "Darcula",
-    
+
     "go.coverOnSave": true,
     "go.coverageOptions": "showUncoveredCodeOnly",
     "go.testTimeout": "5s",
@@ -15,8 +15,9 @@
 
     "git.autofetch": true,
     "git.promptToSaveFilesBeforeCommit": true,
-    
+
     "files.autoSave": "onFocusChange",
+    "files.insertFinalNewline": true,
 
     "editor.rulers": [
         79,
@@ -27,4 +28,12 @@
     "explorer.openEditors.visible": 0,
 
     "terminal.external.osxExec": "iTerm.app",
+
+    "html.format.maxPreserveNewLines": 1,
+
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "gitlens.hovers.enabled": false,
+    "gitlens.currentLine.enabled": false,
 }
