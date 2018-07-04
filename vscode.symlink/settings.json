@@ -1,4 +1,5 @@
 {
+    "workbench.startupEditor": "none",
     "window.restoreWindows": "none",
 
     "workbench.iconTheme": "material-icon-theme",
@@ -19,6 +20,7 @@
     "files.autoSave": "onFocusChange",
     "files.insertFinalNewline": true,
 
+    "editor.fontFamily": "Menlo, 'Overpass Mono', 'monospace', monospace",
     "editor.rulers": [
         79,
         120
