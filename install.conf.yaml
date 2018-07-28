@@ -14,7 +14,6 @@
     ~/.config/sway/config: sway/config.symlink
     ~/.atom: atom.symlink
     ~/.editorconfig: editorconfig.symlink
-    ~/.emacs.d: emacs.d.symlink
     ~/.gitconfig.local: git/gitconfig.local.symlink
     ~/.gitconfig: git/gitconfig.symlink
     ~/.gitignore: git/gitignore.symlink
@@ -29,6 +28,10 @@
       force: true
     ~/.config/Code/User:
       path: vscode.symlink
+      create: false
+      force: true
+    ~/.config/tint2:
+      path: tint2.symlink
       create: false
       force: true
     ~/.zshrc:
