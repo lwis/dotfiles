@@ -14,3 +14,5 @@ git/gitconfig.local.symlink
 
 vscode.symlink/snippets/
 vscode.symlink/workspaceStorage/
+
+tint2.symlink/tint2rc.backup.*

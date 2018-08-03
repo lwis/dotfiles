@@ -30,6 +30,10 @@
       path: vscode.symlink
       create: false
       force: true
+    ~/.config/tint2:
+      path: tint2.symlink
+      create: false
+      force: true
     ~/.zshrc:
       path: zsh/zshrc.symlink
       force: true
