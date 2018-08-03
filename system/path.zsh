@@ -12,16 +12,12 @@ function add_to_manpath()
     fi
 }
 
-export BREW_ROOT=$HOME/.brew
-
 add_to_path /sbin
 add_to_path /bin
 add_to_path /usr/sbin
 add_to_path /usr/bin
 add_to_path /usr/local/sbin
 add_to_path /usr/local/bin
-add_to_path $BREW_ROOT/sbin
-add_to_path $BREW_ROOT/bin
 
 add_to_manpath /usr/local/git/man
 add_to_manpath /usr/local/mysql/man
@@ -29,9 +25,9 @@ add_to_manpath /usr/local/man
 
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
-if [ -d $BREW_ROOT/opt/coreutils/libexec/gnubin ]
+if [ -d /usr/local/opt/coreutils/libexec/gnubin ]
 then
-    export PATH="$BREW_ROOT/opt/coreutils/libexec/gnubin:$PATH"
+    export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 fi
 
 export PATH="$DOTFILES/bin:$PATH"
