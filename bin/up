@@ -21,12 +21,12 @@ then
   if test "$(whence apt-get 2> /dev/null)"
   then
     echo "\033[00;32m──›\033[0m updating apt-get"
-    sudo apt-get update
+    sudo apt update
     set +e
-    sudo apt-get dist-upgrade
-    sudo apt-get autoremove
+    sudo apt dist-upgrade
+    sudo apt autoremove
     set -e
-    sudo apt-get clean
+    sudo apt clean
     echo
   elif test "$(whence dnf 2> /dev/null)"
   then
@@ -38,7 +38,7 @@ then
     set -e
     sudo dnf clean all
     echo
-  elif test "$(whence pacman 2> /dev/null)"
+  elif test "$(whence yay 2> /dev/null)"
   then
     echo "\033[00;32m──›\033[0m updating pacman"
     set +e
@@ -64,6 +64,7 @@ then
   echo "\033[00;32m──›\033[0m updating brew"
   brew update
   brew upgrade
+  brew cask upgrade
   brew cleanup --force
   brew prune
   brew cask cleanup

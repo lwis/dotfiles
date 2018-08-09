@@ -41,11 +41,11 @@
 - shell:
 #    - command: ~/.dotfiles/homebrew/install.sh
     - command: git submodule update --init --recursive
-#    - command: ~/.dotfiles/system/install.sh
+    - command: ~/.dotfiles/system/install.sh
     - command: ~/.dotfiles/fzf/install.sh
     - command: ~/.dotfiles/git/install.sh
-#    - command: ~/.dotfiles/macos/set-defaults.sh
-#    - command: ~/.dotfiles/pip/install.sh
+    - command: ~/.dotfiles/macos/set-defaults.sh
+    - command: ~/.dotfiles/pip/install.sh
     - command: ~/.dotfiles/tmux/install.sh
     - command: ~/.dotfiles/vscode/install.sh
 #    - command: ~/.dotfiles/atom/install.sh
