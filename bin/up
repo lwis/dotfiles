@@ -65,9 +65,8 @@ then
   brew update
   brew upgrade
   brew cask upgrade
-  brew cleanup --force
+  brew cleanup
   brew prune
-  brew cask cleanup
   echo
 fi
 
@@ -110,6 +109,6 @@ fi
 
 if test "$(uname)" = "Darwin"
 then
-  echo "\033[00;32m──›\033[0m OS X Software Update"
+  echo "\033[00;32m──›\033[0m macOS Software Update"
   softwareupdate -l
 fi

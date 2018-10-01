@@ -26,6 +26,10 @@ then
     # Set the theme to Dark.
     defaults write NSGlobalDomain AppleInterfaceTheme Dark
     defaults write NSGlobalDomain AppleInterfaceStyle Dark
+    # Turn font smoothing on.
+    defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
+    # Don't show recent apps in the dock
+    defaults write com.apple.dock show-recents -bool false
     # Set standby delay to 24 hours (default is 1 hour)
     sudo pmset -a standbydelay 86400
     # Disable the sound effects on boot
@@ -261,7 +265,7 @@ then
     # Disable shadow in screenshots
     defaults write com.apple.screencapture disable-shadow -bool true
     # Enable subpixel font rendering on non-Apple LCDs
-    defaults write NSGlobalDomain AppleFontSmoothing -int 2
+    defaults write NSGlobalDomain AppleFontSmoothing -int 1
     # Enable HiDPI display modes (requires restart)
     sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
 fi
