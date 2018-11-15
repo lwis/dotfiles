@@ -34,7 +34,7 @@
   8. `# mkfs.ext2 /dev/nvme0n1p2`
   9. Set up encryption
         * `# cryptsetup luksFormat /dev/nvme0n1p3`
-        * `# cryptsetup open /dev/nvme0n1p1 cryptlvm`
+        * `# cryptsetup luksOpen /dev/nvme0n1p3 cryptlvm`
   10. Set up lvm:
         * `# pvcreate --dataalignment 512k /dev/mapper/cryptlvm`
         * `# vgcreate main /dev/mapper/cryptlvm`
@@ -51,8 +51,8 @@
   16. `# mount /dev/nvme0n1p2 /mnt/boot`
   17. `# mount /dev/main/home /mnt/home`
   18. `# mkdir /mnt/boot/EFI`
-  19. `# mount /dev/nvme0n1p1 /boot/EFI`
-  20. `# pacstrap -i /mnt base base-devel grub efibootmgr dosfstools connman iwd intel-ucode zsh sudo mesa vulkan-intel linux-headers linux-lts`
+  19. `# mount /dev/nvme0n1p1 /mnt/boot/EFI`
+  20. `# pacstrap -i /mnt base base-devel grub efibootmgr dosfstools connman iwd intel-ucode zsh sudo mesa vulkan-intel linux-headers`
   21. `# genfstab -U /mnt >> /mnt/etc/fstab`
   22. Add `discard` to `/mnt/etc/fstab`
   23. `# arch-chroot /mnt`
@@ -68,15 +68,14 @@
     ```
   29. Edit `/etc/mkinitcpio.conf` and add `encrypt lvm2` in between `block` and `filesystems`
   30. `# mkinitcpio -p linux`
-  31. `# mkinitcpio -p linux-lts`
   32. `# nano /etc/locale.gen` (uncomment en_GB.UTF-8)
   33. `# locale-gen`
   34. Add `LANG=en_GB.UTF-8` to `/etc/locale.conf`
   35. `# localectl set-locale LANG="en_GB.UTF-8"`
   36. `# passwd` (for setting root password)
   37. Edit `/etc/default/grub`:
-        add `cryptdevice=UUID=<UUID>:cryptlvm:allow-discards` to the `GRUB_CMDLINE_LINUX`
-  38. `# # grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=arch_grub --recheck`
+        add `cryptdevice=UUID=<UUID>:cryptlvm:allow-discards` to `GRUB_CMDLINE_LINUX`
+  38. `# grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=arch_grub --recheck`
   39. `# cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo`
   40. `# grub-mkconfig -o /boot/grub/grub.cfg`
   41. Create swap file:
@@ -96,7 +95,7 @@
 
 ### General
 
-`# pacman -Syu gnome reflector otf-overpass tlp acpi_call acpi_call-lts smartmontools tpacpi-bat x86_energy_perf_policy ethtool rsync restic atom python3`
+`# pacman -Syu gnome reflector otf-overpass tlp acpi_call smartmontools tpacpi-bat x86_energy_perf_policy ethtool rsync restic atom python3`
 
 `# pacman -Rns networkmanager netctl wpa_supplicant`
 
