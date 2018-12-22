@@ -39,4 +39,5 @@
     "gitlens.hovers.enabled": false,
     "gitlens.currentLine.enabled": false,
     "code-runner.clearPreviousOutput": true,
+    "window.titleBarStyle": "custom",
 }
