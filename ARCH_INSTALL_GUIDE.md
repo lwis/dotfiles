@@ -1,101 +1,118 @@
 # Arch Linux
 
-# Installation procedure (encrypted LVM on EFI):
-  1. Ensure running under EFI `# ls /sys/firmware/efi/efivars`
-  2. Use wifi-menu to connect to network
-  3. `# timedatectl set-ntp true`
-  4. Update packages and install reflector: `# pacman -Syyu reflector`
-  5. Download latest mirrors `# reflector --country 'United Kingdom' --latest 10 --age 24 --sort rate --save /etc/pacman.d/mirrorlist`
-  6. Create partitons:
-      ```
-      # gdisk /dev/nvme0n1
-      o
-      n
-      enter
-      enter
-      +256M
-      EF00
+# Installation procedure (systemd, EFI, encrypted LVM2):
+* Ensure running under EFI `# ls /sys/firmware/efi/efivars`
+* Use wifi-menu to connect to network
+* Update packages and install reflector: `# pacman -Syyu reflector`
+* Download latest mirrors `# reflector --country 'United Kingdom' --latest 10 --age 24 --sort rate --save /etc/pacman.d/mirrorlist`
+* Create partitons:
+```
+# gdisk /dev/nvme0n1
+o
+n
+enter
+enter
++512M
+EF00
 
-      n
-      enter
-      enter
-      +512M
-      8300
+n
+enter
+enter
+enter
+8E00
 
-      n
-      enter
-      enter
-      enter
-      8E00
+w
+```
+* `# mkfs.fat -F32 /dev/nvme0n1p1`
+* Set up encryption
+  * `# cryptsetup luksFormat /dev/nvme0n1p2`
+  * `# cryptsetup luksOpen /dev/nvme0n1p2 cryptlvm`
+* Set up lvm:
+  * `# pvcreate --dataalignment 512k /dev/mapper/cryptlvm`
+  * `# vgcreate main /dev/mapper/cryptlvm`
+  * `# lvcreate -L 64GB -n root main`
+  * `# lvcreate -l 100%FREE -n home main`
+  * `# modprobe dm_mod`
+  * `# vgscan`
+  * `# vgchange -ay`
+* `# mkfs.ext4 /dev/main/root`
+* `# mkfs.ext4 /dev/main/home`
+* `# mount /dev/main/root /mnt`
+* `# mkdir /mnt/home`
+* `# mount /dev/main/home /mnt/home`
+* `# mkdir /mnt/boot`
+* `# mount /dev/nvme0n1p1 /mnt/boot`
+* `# pacstrap -i /mnt base base-devel efibootmgr dosfstools connman iwd intel-ucode zsh sudo mesa vulkan-intel linux-headers`
+* Edit `/etc/mkinitcpio.conf` and add `sd-encrypt sd-lvm2` in between `block` and `filesystems`, and switch `udev` to `systemd`, and uncomment the `lz4` compression option.
+```
+HOOKS=(base systemd autodetect modconf block filesystems sd-encrypt sd-lvm2 keyboard fsck)
+```
+* `# mkinitcpio -p linux`
+* `# pacman -S linux-zen linux-lts linux-hardened`
+* `# genfstab -U /mnt >> /mnt/etc/fstab`
+* Add `discard` to `/mnt/etc/fstab`
+* `# arch-chroot /mnt`
+* `# ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime`
+* `# hwclock --systohc`
+* `# echo '<hostname>' > /etc/hostname`
+* Add the following to `/etc/hosts`
+```
+*0.0.1	  localhost
+::1	      	  localhost
+*0.1.1	  <hostname>.localdomain <hostname>
+```
+* `# nano /etc/locale.gen` (uncomment en_GB.UTF-8)
+* `# locale-gen`
+* Add `LANG=en_GB.UTF-8` to `/etc/locale.conf`
+* `# passwd` (for setting root password)
+* `# bootctl --path=/boot update`
+* Change `/boot/loader/loader.conf` to
+```
+default  arch-linux
+timeout  4
+console-mode max
+editor   no
+```
+* Create entires such as `/boot/loader/entries/arch-linux.conf`
+```
+title   Arch Linux
+linux   /vmlinuz-linux
+initrd  /intel-ucode.img
+initrd  /initramfs-linux.img
+options rd.luks.name=<UUID for /dev/nvme0n1p2>=cryptlvm rd.luks.options=discard root=UUID=<UUID for /dev/mapper/main-root> rw quiet
+```
+* Add the following to `/etc/pacman.d/hooks/systemd-boot.hook`
+```
+[Trigger]
+Type = Package
+Operation = Upgrade
+Target = systemd
 
-      w
-      ```
-  7. `# mkfs.fat -F32 /dev/nvme0n1p1`
-  8. `# mkfs.ext2 /dev/nvme0n1p2`
-  9. Set up encryption
-        * `# cryptsetup luksFormat /dev/nvme0n1p3`
-        * `# cryptsetup luksOpen /dev/nvme0n1p3 cryptlvm`
-  10. Set up lvm:
-        * `# pvcreate --dataalignment 512k /dev/mapper/cryptlvm`
-        * `# vgcreate main /dev/mapper/cryptlvm`
-        * `# lvcreate -L 64GB -n root main`
-        * `# lvcreate -l 100%FREE -n home main`
-        * `# modprobe dm_mod`
-        * `# vgscan`
-        * `# vgchange -ay`
-  11. `# mkfs.ext4 /dev/main/root`
-  12. `# mkfs.ext4 /dev/main/home`
-  13. `# mount /dev/main/root /mnt`
-  14. `# mkdir /mnt/boot`
-  15. `# mkdir /mnt/home`
-  16. `# mount /dev/nvme0n1p2 /mnt/boot`
-  17. `# mount /dev/main/home /mnt/home`
-  18. `# mkdir /mnt/boot/EFI`
-  19. `# mount /dev/nvme0n1p1 /mnt/boot/EFI`
-  20. `# pacstrap -i /mnt base base-devel grub efibootmgr dosfstools connman iwd intel-ucode zsh sudo mesa vulkan-intel linux-headers`
-  21. `# genfstab -U /mnt >> /mnt/etc/fstab`
-  22. Add `discard` to `/mnt/etc/fstab`
-  23. `# arch-chroot /mnt`
-  24. `# ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime`
-  25. `# hwclock --systohc`
-  26. `# timedatectl set-ntp true`
-  27. `# echo '<hostname>' > /etc/hostname`
-  28. Add the following to `/etc/hosts`
-    ```
-    127.0.0.1	  localhost
-    ::1	      	localhost
-    127.0.1.1	  <hostname>.localdomain <hostname>
-    ```
-  29. Edit `/etc/mkinitcpio.conf` and add `encrypt lvm2` in between `block` and `filesystems`
-  30. `# mkinitcpio -p linux`
-  32. `# nano /etc/locale.gen` (uncomment en_GB.UTF-8)
-  33. `# locale-gen`
-  34. Add `LANG=en_GB.UTF-8` to `/etc/locale.conf`
-  35. `# localectl set-locale LANG="en_GB.UTF-8"`
-  36. `# passwd` (for setting root password)
-  37. Edit `/etc/default/grub`:
-        add `cryptdevice=UUID=<UUID>:cryptlvm:allow-discards` to `GRUB_CMDLINE_LINUX`
-  38. `# grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=arch_grub --recheck`
-  39. `# cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo`
-  40. `# grub-mkconfig -o /boot/grub/grub.cfg`
-  41. Create swap file:
-        * `# fallocate -l 16G /swapfile`
-        * `# chmod 600 /swapfile`
-        * `# mkswap /swapfile`
-        * `# swapon /swapfile`
-        * `# echo '/swapfile none swap defaults 0 0' >> /etc/fstab`
-  42. `# useradd -m -s -G wheel /bin/zsh <name>`
-  43. `# passwd <name>`
-  44. `# nano /etc/sudoers` uncomment wheel
-  45. `# exit`
-  46. `# umount -a`
-  47. `# reboot`
+[Action]
+Description = Updating systemd-boot
+When = PostTransaction
+Exec = /usr/bin/bootctl update
+```
+* Create swap file:
+  * `# fallocate -l 16G /swapfile`
+  * `# chmod 600 /swapfile`
+  * `# mkswap /swapfile`
+  * `# swapon /swapfile`
+  * `# echo '/swapfile none swap defaults 0 0' >> /etc/fstab`
+* `# useradd -m -s -G wheel /bin/zsh <name>`
+* `# passwd <name>`
+* `# nano /etc/sudoers` uncomment wheel
+* `# exit`
+* `# umount -a`
+* `# reboot`
+* `# timedatectl set-ntp true`
+* `# localectl set-locale LANG="en_GB.UTF-8"`
 
 ## Post Installation
 
 ### General
 
-`# pacman -Syu gnome reflector otf-overpass tlp acpi_call smartmontools tpacpi-bat x86_energy_perf_policy ethtool rsync restic atom python3`
+`# pacman -Syu gnome reflector otf-overpass tlp acpi_call smartmontools tpacpi-bat x86_energy_perf_policy ethtool rsync restic python3`
 
 `# pacman -Rns networkmanager netctl wpa_supplicant`
 
@@ -125,13 +142,12 @@ Uncomment `VerbosePkgLists`, `Color`, `TotalDownload`, and add `ILoveCandy`
 
 I don't enable continuous TRIM because not all controllers fully support it.
 
-NB: I added 'allow-discards' to my grub config earlier.
+NB: I added 'allow-discards' to my cryptdevice entry earlier.
 
 Change `/etc/lvm/lvm.conf` to `issue_discards = 1`.
 
 `# systemctl enable fstrim.timer`
 
 `# systemctl start fstrim.service`
-
 
 https://wiki.archlinux.org/index.php/Swap#Swappiness
