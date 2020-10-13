@@ -18,7 +18,6 @@ source $DOTFILES/pip/path.zsh
 source $DOTFILES/system/path.zsh
 
 # Everything else
-source $DOTFILES/docker/functions.zsh
 source $DOTFILES/system/aliases.zsh
 source $DOTFILES/system/env.zsh
 source $DOTFILES/system/keys.zsh

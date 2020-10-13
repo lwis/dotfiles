@@ -1,17 +1,6 @@
-atom.symlink/.apm
-atom.symlink/.node-gyp
-atom.symlink/.storage
-atom.symlink/blob-store
-atom.symlink/compile-cache/
-atom.symlink/packages
-atom.symlink/storage
-atom.symlink/themes
-atom.symlink/recovery
-atom.symlink/nohup.out
-atom.symlink/github.cson
-
 git/gitconfig.local.symlink
 
+vscode.symlink/globalStorage/
 vscode.symlink/snippets/
 vscode.symlink/workspaceStorage/
 

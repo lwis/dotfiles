@@ -12,7 +12,7 @@
     branch = auto
     ui = true
 [core]
-    excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore
     editor = nano
     autocrlf = input
 [apply]
@@ -27,6 +27,7 @@
     default = simple
 [pull]
     ff = yes
+	rebase = false
 [merge]
     renameLimit = 5000
     ff = no

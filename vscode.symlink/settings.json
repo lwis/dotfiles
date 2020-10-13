@@ -40,4 +40,12 @@
     "gitlens.currentLine.enabled": false,
     "code-runner.clearPreviousOutput": true,
     "window.titleBarStyle": "custom",
+    "java.configuration.checkProjectSettingsExclusions": false,
+    "editor.maxTokenizationLineLength": 65555,
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "cSpell.language": "en-GB",
+    "markdown-preview-enhanced.mermaidTheme": "default",
+    "go.autocompleteUnimportedPackages": true,
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true,
 }

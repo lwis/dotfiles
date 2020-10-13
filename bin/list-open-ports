@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+if test "$(uname)" = "Darwin"
+then
+    sudo lsof -iTCP -sTCP:LISTEN -n -P
+fi

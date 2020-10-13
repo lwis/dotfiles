@@ -64,9 +64,7 @@ then
   echo "\033[00;32m──›\033[0m updating brew"
   brew update
   brew upgrade
-  brew cask upgrade
   brew cleanup
-  brew prune
   echo
 fi
 
@@ -77,13 +75,6 @@ then
   then
     ~/.fzf/install --all --no-update-rc
   fi
-  echo
-fi
-
-if test "$(whence apm 2> /dev/null)"
-then
-  echo "\033[00;32m──›\033[0m updating apm"
-  apm upgrade -c false
   echo
 fi
 
